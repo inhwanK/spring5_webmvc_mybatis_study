@@ -25,9 +25,6 @@
             <param-name>contextConfigLocation</param-name>
             <param-value>
 	            spring5_webmvc_mybatis_study.config.ContextRoot
-	            spring5_webmvc_mybatis_study.config.ContextDataSource
-	            spring5_webmvc_mybatis_study.config.ContextSqlSession
-	            spring5_webmvc_mybatis_study.config.MvcConfig
 	        </param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
