@@ -1,32 +1,29 @@
 {
 	"folders": {},
 	"connections": {
-		"mysql5-1798dd163c0-697bbff59f108665": {
+		"mysql5-1799dcfe036-78260169a6e363d0": {
 			"provider": "mysql",
 			"driver": "mysql5",
-			"name": "spring5",
+			"name": "localhost",
 			"save-password": true,
 			"show-system-objects": true,
 			"read-only": false,
 			"configuration": {
 				"host": "localhost",
 				"port": "3306",
-				"database": "spring5",
-				"url": "jdbc:mysql://localhost:3306/spring5",
+				"url": "jdbc:mysql://localhost:3306/",
 				"home": "C:\\Program Files\\MySQL\\MySQL Server 5.7",
 				"type": "dev",
 				"auth-model": "native",
 				"handlers": {}
-			},
-			"custom-properties": {
-				"database.meta.separate.connection": "false"
 			}
 		},
-		"mysql8-1798df9f11b-79eedff39c901944": {
+		"mysql5-1799dd06e1e-4b0c9ca0d5cbcef0": {
 			"provider": "mysql",
-			"driver": "mysql8",
-			"name": "localhost",
+			"driver": "mysql5",
+			"name": "localhost 2",
 			"save-password": true,
+			"show-system-objects": true,
 			"read-only": false,
 			"configuration": {
 				"host": "localhost",
@@ -46,8 +43,7 @@
 			"description": "Regular development database",
 			"auto-commit": true,
 			"confirm-execute": false,
-			"confirm-data-change": false,
-			"auto-close-transactions": false
+			"confirm-data-change": false
 		}
 	}
 }
