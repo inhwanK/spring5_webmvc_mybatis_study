@@ -13,6 +13,7 @@ import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 
 import spring5_webmvc_mybatis_study.config.ContextRoot;
 import spring5_webmvc_mybatis_study.dto.Member;
@@ -21,6 +22,7 @@ import spring5_webmvc_mybatis_study.dto.Member;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { ContextRoot.class })
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@WebAppConfiguration
 public class MemberMapperTest {
 	protected static final Log log = LogFactory.getLog(MemberMapperTest.class);
 
