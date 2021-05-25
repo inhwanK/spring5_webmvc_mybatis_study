@@ -1,5 +1,6 @@
 package spring5_webmvc_mybatis_study.mappers;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
@@ -15,4 +16,5 @@ public interface MemberMapper {
     int insertMember(Member member);
     int updateMember(Member member);
     int deleteMember(Member member);
+//    List<Member> selectMembersByRegdate(LocalDateTime from,LocalDateTime to);
 }
