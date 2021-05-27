@@ -1,26 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  <mapper namespace="spring5_webmvc_mybatis_study.mappers.MemberMapper">
+ 
 	<resultMap type="Member" id="resMember">
 		<id column="id" property="id" />
 		<result column="email" property="email" />
 		<result column="name" property="name" />
 		<result column="regdate" property="registerDateTime" />
 	</resultMap>
-
-	<sql id="selectSQL">
-		select id, email, password, name, regdate
-		from member
-	</sql>
-
-	<sql id="whereSQL">
-		<where>
-			<if test="regdate != null">
-				regdate between #{from} and #{to}
-				order by regdate desc;
-			</if>
-		</where>
-	</sql>
 
 
 	<select id="selectMemberByEmail" resultMap="resMember">
@@ -29,7 +16,13 @@
 		FROM member
 		WHERE email = #{email}
 	</select>
-
+	
+	<select id="selectMemberById" resultMap="resMember">
+		select id, email, name, regdate
+		from member
+		where id = #{id}
+	</select>
+	
 	<select id="selectMemberAll" resultMap="resMember">
 		SELECT id, email,
 		password, name, regdate
@@ -59,13 +52,13 @@
 		from member
 		where email=#{email}
 	</delete>
-
-<!-- 
-	<select id="selectMembersByRegdate" parameterType="ListCommand" resultType="resMember">
-		resultMap="resMember">
-		<include refid="selectSQL" />
-		<include refid="whereSQL" />
-	</select> -->
+ 
+	<select id="selectMembersByRegdate" parameterType="ListCommand" resultMap="resMember">
+		select id, email, password, name, regdate
+		from member
+		where regdate between #{from} and #{to}
+		order by regdate desc;
+	</select>
 
 
 </mapper> 

@@ -15,6 +15,7 @@ public class AuthServiceImpl implements AuthService{
 	@Autowired
     private MemberMapper memberMapper;
 
+	@Override
     public AuthInfo authenicate(String email, String password) {
         Member member = memberMapper.selectMemberByEmail(email);
         if (member == null) {

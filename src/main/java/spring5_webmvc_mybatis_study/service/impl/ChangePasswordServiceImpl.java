@@ -15,6 +15,7 @@ public class ChangePasswordServiceImpl implements ChangePasswordService {
 	private MemberMapper memberMapper;
 
 	@Transactional
+	@Override
 	public void changePassword(String email, String oldPwd, String newPwd) {
 		Member member = memberMapper.selectMemberByEmail(email);
 		if (member == null) {

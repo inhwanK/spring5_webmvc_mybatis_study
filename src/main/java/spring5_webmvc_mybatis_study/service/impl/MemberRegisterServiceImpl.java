@@ -13,9 +13,11 @@ import spring5_webmvc_mybatis_study.service.MemberRegisterService;
 
 @Service
 public class MemberRegisterServiceImpl implements MemberRegisterService {
+	
 	@Autowired
 	private MemberMapper memberMapper;
 
+	@Override
 	public Long regist(RegisterRequest req) {
 		Member member = memberMapper.selectMemberByEmail(req.getEmail());
 		if (member != null) {
